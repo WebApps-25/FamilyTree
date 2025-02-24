@@ -8,23 +8,53 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="container my-4">
-        <h1 class="text-center mb-4">Family Tree</h1>
-        <form id="add-person-form" class="mb-4">
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <input type="text" id="name" class="form-control" placeholder="Name" required>
-                </div>
-                <div class="col-md-4">
-                    <input type="date" id="birthDate" class="form-control" placeholder="Birth Date">
-                </div>
-                <div class="col-md-4">
-                    <button type="submit" class="btn btn-primary w-100">Add Person</button>
-                </div>
-            </div>
-        </form>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Alaharahsheh Family Tree</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br>
+    <div class="card text-center mb-4 element" style="width: 10rem; height: 50px;">
+        <img src="./data/upload/Abo 5shoom (1).jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mohammad Khalid Family</h5>
+          <p class="card-text">Abo 5shoom the boos</p>
+          <a href="./views/Home.html" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    <script src="./main.js" type="module">
         <div id="tree-container" class="row justify-content-center"></div>
-    </div>
-    <script src="./main.js" type="module"></script>
+    </script>
 </body>
 </html>
