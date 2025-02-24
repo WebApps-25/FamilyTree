@@ -1,10 +1,16 @@
 export function renderTree(family) {
     const container = document.getElementById('tree-container');
     container.innerHTML = '';
+    console.log('Rendering family:', family);
+
+    if (!family || family.length === 0) {
+        container.innerHTML = '<p class="text-center">No family members yet. Add someone!</p>';
+        return;
+    }
 
     family.forEach(person => {
         const node = document.createElement('div');
-        node.className = 'col-md-4 tree-node'; // Bootstrap column for responsiveness
+        node.className = 'col-md-4 tree-node';
         node.innerHTML = `
             <div class="card shadow-sm">
                 <div class="card-body">

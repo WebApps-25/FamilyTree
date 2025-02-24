@@ -1,17 +1,18 @@
 // Using localStorage for persistence
-export function getFamily() {
+/*export function getFamily() {
     const family = localStorage.getItem('familyTree');
-    return family ? JSON.parse(family) : []; // Empty array if no data
-}
+    console.log('Family data:', family);
+    return family ? JSON.parse(family) : [];
+}*/
 
 export function addPerson(person) {
     const family = getFamily();
-    family.push({ ...person, id: Date.now() }); // Simple unique ID
+    family.push({ ...person, id: Date.now() });
     localStorage.setItem('familyTree', JSON.stringify(family));
 }
 
-// Optional: Load from family.json instead (uncomment to use)
-// export async function getFamily() {
-//     const response = await fetch('/data/family.json');
-//     return response.json();
-// }
+
+export async function getFamily() {
+     const response = await fetch('/data/family.json');
+    return response.json();
+}

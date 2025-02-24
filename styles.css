@@ -1,28 +1,9 @@
-/* Custom styles for the tree */
 .tree-node {
     margin: 10px;
     text-align: center;
 }
 
 .tree-node .card {
-    width: 200px; /* Fixed width for uniformity */
+    width: 200px;
     min-height: 100px;
-    position: relative;
-}
-
-/* Optional: Lines connecting nodes (basic) */
-.tree-node::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    width: 2px;
-    height: 20px;
-    background: #ccc;
-    transform: translateX(-50%);
-}
-
-/* Remove line from top-most nodes if needed */
-.tree-node:first-child::before {
-    display: none;
 }
