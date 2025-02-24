@@ -1,17 +1,28 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+/* Custom styles for the tree */
+.tree-node {
+    margin: 10px;
+    text-align: center;
 }
-#tree-container {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    min-height: 300px;
+
+.tree-node .card {
+    width: 200px; /* Fixed width for uniformity */
+    min-height: 100px;
+    position: relative;
 }
-form {
-    margin-bottom: 20px;
+
+/* Optional: Lines connecting nodes (basic) */
+.tree-node::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: #ccc;
+    transform: translateX(-50%);
 }
-input, button {
-    margin-right: 10px;
-    padding: 5px;
+
+/* Remove line from top-most nodes if needed */
+.tree-node:first-child::before {
+    display: none;
 }
